@@ -2,7 +2,7 @@
   "name": "basload-lang",
   "displayName": "BASLOAD Lang",
   "description": "Syntax highlighting for BASLOAD",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "SadLogic",
   "author": "Thraka",
   "license": "MIT",

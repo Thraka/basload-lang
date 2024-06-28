@@ -6,7 +6,7 @@ This extension adds language support for BASLOAD, a transpiler that outputs Comm
 
 - Syntax highlighting.
 
-![demo](../images/demo.png)
+![demo](./images/demo.png)
 
 ## Requirements
 
