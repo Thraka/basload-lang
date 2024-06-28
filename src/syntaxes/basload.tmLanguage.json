@@ -1,0 +1,132 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "BASLOAD",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#directives"
+		},
+		{
+			"include": "#labels"
+		},
+		{
+			"include": "#goto"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#variables"
+		}
+	],
+	"repository": {
+		"goto": {
+			"patterns": [
+				{
+					"name": "entity.name.function.basload",
+					"match": "(?i)(goto|gosub)\\s+([a-zA-Z0-9\\.]+)",
+					"captures": {
+						"1": {
+							"name": "keyword.control.basload"
+						},
+						"2": {
+							"name": "entity.name.function.basload"
+						}
+					}
+				}
+			]
+		},
+		"functions":{
+			"patterns": [
+				{
+					"name": "entity.name.function.basload.builtin.numeric",
+					"match": "(?i)(?<!\\.)\\b(ABS|ASC|ATN|COS|EXP|FN|FRE|I2CPEEK|INT|JOY|LEN|LOG|PEEK|POINTER|POS|RND|SGN|SIN|SPC|SQR|STRPTR|TAB|TAN|TATTR|TDATA|USR|VAL|VPEEK)\\b"
+				},
+				{
+					"name": "entity.name.function.basload.builtin.string",
+					"match": "(?i)(?<!\\.)\\b(BIN|CHR|HEX|LEFT|MID|RIGHT|RPT|STR)\\$"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.basload",
+					"match": "(?i)(?<!\\.)\\b(FOR|GOSUB|GOTO|IF|NEXT|RETURN|STEP|THEN|TO)\\b"
+				},
+				{
+					"name": "keyword.other.basload",
+					"match": "(?i)(?<!\\.)\\b(BANK|BINPUT#|BLOAD|BOOT|BSAVE|BVERIFY|BVLOAD|CHAR|CLOSE|CLR|CLS|CMD|CONT|COLOR|DATA|DEF|DIM|DOS|EDIT|END|EXEC|FMCHORD|FMDRUM|FMFREQ|FMINIT|FMINST|FMNOTE|FMPAN|FMPLAY|FMPOKE|FMVIB|FMVOL|FRAME|GET|GET#|HELP|I2CPOKE|INPUT|INPUT#|KEYMAP|LET|LINE|LINPUT|LINPUT#|LIST|LOAD|LOCATE|MENU|MON|MOUSE|MOVSPR|NEW|OLD|ON|OPEN|POKE|POWEROFF|PRINT|PRINT#|PSET|PSGCHORD|PSGFREQ|PSGINIT|PSGNOTE|PSGPAN|PSGPLAY|PSGVOL|PSGWAV|READ|REBOOT|RECT|REN|RESET|RESTORE|RUN|SAVE|SCREEN|SLEEP|SPRITE|SPRMEM|STOP|SYS|TILE|VERIFY|VPOKE|VLOAD|WAIT)\\b"
+				},
+				{
+					"name": "keyword.operator.basload",
+					"match": "(?i)(?<!\\.)(\\band\\b|\\bor\\b|\\bnot\\b|\\*|/|\\+|-|=|<>|<|>|<=|>=|\\^)"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.basload",
+			"begin": "\"",
+			"end": "\""
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.basload",
+					"match": "(?i)(?:REM|##)(.*)"
+				},
+				{
+					"name": "comment.block.pre"
+				}
+			]
+		},
+		"labels": {
+			"patterns": [
+				{
+					"name": "entity.name.function.basload",
+					"match": "\\b([a-zA-Z0-9\\.]+)\\b:"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.basload.dec",
+					"match": "\\b([0-9]+)\\b"
+				},
+				{
+					"name": "constant.numeric.basload.hex",
+					"match": "(\\$[0-9A-F]+)\\b"
+				}
+			]
+		},
+		"directives":{
+			"patterns": [
+				{
+					"name": "support.constant",
+					"match": "^#(REM|INCLUDE|AUTONUM|CONTROLCODES|SYMFILE)\\b"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.other",
+					"match": "\\b([a-zA-Z0-9\\.]+)\\$*"
+				}
+			]
+		}
+	},
+	"scopeName": "source.basload"
+}

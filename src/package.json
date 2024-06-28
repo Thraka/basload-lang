@@ -1,0 +1,37 @@
+{
+  "name": "basload-lang",
+  "displayName": "BASLOAD Lang",
+  "description": "Syntax highlighting for BASLOAD",
+  "version": "1.0.0",
+  "publisher": "SadLogic",
+  "author": "Thraka",
+  "license": "MIT",
+  "pricing": "Free",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Thraka/basload-lang"
+  },
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "basload",
+        "aliases": ["BASLOAD","basload"],
+        "extensions": [".bl",".BL"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "basload",
+        "scopeName": "source.basload",
+        "path": "./syntaxes/basload.tmLanguage.json"
+      }
+    ]
+  }
+}
