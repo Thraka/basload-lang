@@ -84,7 +84,7 @@
 			"patterns": [
 				{
 					"name": "comment.line.basload",
-					"match": "(?i)(?:REM|##)(.*)"
+					"match": "(?i)(?:REM |## )(.*)"
 				},
 				{
 					"name": "comment.block.pre"
@@ -95,7 +95,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.basload",
-					"match": "\\b([a-zA-Z0-9\\.]+)\\b:"
+					"match": "\\b([a-zA-Z0-9\\._]+)\\b:"
 				}
 			]
 		},
@@ -123,7 +123,7 @@
 			"patterns": [
 				{
 					"name": "variable.other",
-					"match": "\\b([a-zA-Z0-9\\.]+)\\$*"
+					"match": "\\b([a-zA-Z0-9\\._]+)\\$*"
 				}
 			]
 		}
