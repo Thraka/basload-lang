@@ -22,9 +22,13 @@ None
 
 ## Release Notes
 
+### 1.1.2
+
+Improved ## and REM comment highlighting.
+
 ### 1.1.1
 
-Add variable and label syntax highlighting now supports the `_` character.
+Variable and label syntax highlighting now supports the `_` character.
 
 ### 1.0.0
 

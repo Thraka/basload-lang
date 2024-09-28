@@ -83,11 +83,20 @@
 		"comments": {
 			"patterns": [
 				{
-					"name": "comment.line.basload",
-					"match": "(?i)(?:REM |## )(.*)"
+					"name": "comment.line.basic",
+					"match": "(?i)(?:REM)( .*)"
 				},
 				{
-					"name": "comment.block.pre"
+					"name": "comment.line.basic2",
+					"match": "(?i)(?:REM$)"
+				},
+				{
+					"name": "comment.line.basload",
+					"match": "(?i)(?:^[ \t]*##)( .*)"
+				},
+				{
+					"name": "comment.line.basload2",
+					"match": "(?i)(?:^[ \t]*##$)"
 				}
 			]
 		},
