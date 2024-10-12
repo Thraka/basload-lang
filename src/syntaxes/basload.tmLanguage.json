@@ -35,7 +35,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.basload",
-					"match": "(?i)(goto|gosub)\\s+([a-zA-Z0-9\\.]+)",
+					"match": "(?i)(goto|gosub)\\s+([a-zA-Z0-9\\._]+)",
 					"captures": {
 						"1": {
 							"name": "keyword.control.basload"
