@@ -22,6 +22,6 @@ None
 
 ## Release Notes
 
-### 1.1.3
+### 1.1.4
 
-Commenting supports putting a TAB character after the statement (REM or ##)
+- GOTO and GOSUB highlights correctly with `_` character.
