@@ -22,14 +22,6 @@ None
 
 ## Release Notes
 
-### 1.1.2
+### 1.1.3
 
-Improved ## and REM comment highlighting.
-
-### 1.1.1
-
-Variable and label syntax highlighting now supports the `_` character.
-
-### 1.0.0
-
-Initial release!
+Commenting supports putting a TAB character after the statement (REM or ##)
