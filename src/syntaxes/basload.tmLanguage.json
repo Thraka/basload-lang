@@ -84,7 +84,7 @@
 			"patterns": [
 				{
 					"name": "comment.line.basic",
-					"match": "(?i)(?:REM)( |\t.*)"
+					"match": "(?i)(?:REM)([ \t].*)"
 				},
 				{
 					"name": "comment.line.basic2",
@@ -92,7 +92,7 @@
 				},
 				{
 					"name": "comment.line.basload",
-					"match": "(?i)(?:^[ \t]*##)( |\t.*)"
+					"match": "(?i)(?:^[ \t]*##)([ \t].*)"
 				},
 				{
 					"name": "comment.line.basload2",
