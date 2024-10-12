@@ -2,6 +2,10 @@
 
 All notable changes to the "basload-lang" extension will be documented in this file.
 
+## [1.1.5]
+
+- Somehow I broke ALL comments.. Fixed now. OUCH!
+
 ## [1.1.4]
 
 - GOTO and GOSUB highlights correctly with `_` character.

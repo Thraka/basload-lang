@@ -22,6 +22,6 @@ None
 
 ## Release Notes
 
-### 1.1.4
+### 1.1.5
 
-- GOTO and GOSUB highlights correctly with `_` character.
+- Somehow I broke ALL comments.. Fixed now. OUCH!
